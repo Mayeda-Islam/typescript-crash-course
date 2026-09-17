@@ -1,19 +1,27 @@
-type customer = {
-  name: string;
-  age: number;
-};
-const customer1: customer = {
-  name: "John Doe",
-  age: 25,
-};
-console.log(customer1);
+type address=string;
 
-interface customer2 {
-  name: string;
-  age: number;
+type stringOrNumber=string|number;
+
+type movies= "The Dark Knight" | "Inception" | "Interstellar";
+
+// interface person= "John Doe" | "Jane Doe" | "Jack Doe";
+// interface-এর পরে = ব্যবহার করা যায় না।
+// String union-এর জন্য type ব্যবহার করতে হয়।
+//  interface দিয়ে union type লেখা যায় না। 
+//  interface ব্যবহার করলে object structure দিতে হয়।
+
+
+interface A{
+    name:string;
+    age:number;
 }
-const customer3: customer2 = {
-  name: "John Doe",
-  age: 25,
+interface B{
+    address:string;
+}   
+// intersection type, works like and operator
+const AB: A & B = {
+    name: "John Doe",
+    age: 25,
+    address: "123 Main Street",
 };
-console.log(customer3);
+console.log(AB);
