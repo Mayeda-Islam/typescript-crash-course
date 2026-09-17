@@ -8,7 +8,9 @@ type employee = {
   isManager: boolean;
   address?: string //optional
 };
-
+// type alias is used to create a new name for a type.
+//  It is used to create a new name for a type that is already defined.
+// It is better to use interface instead of type alias when you want to create a new name for a type that is not yet defined.
 const employee1: employee = {
   name: "John Doe",
   age: "25 years" as unknown as number, //type assertion is used to tell the compiler that we know the type of a variable better than it does. It is used to convert a variable from one type to another. It is also used to tell the compiler that we know the type of a variable better than it does. It is used to convert a variable from one type to another.
